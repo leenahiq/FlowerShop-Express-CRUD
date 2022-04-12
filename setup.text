@@ -1,0 +1,49 @@
+#set up folder structure
+add index.js, .gitignore, .env , connection.js files to main folder
+add two folder models and add flower.js file in it and routes and add method.js file in it 
+
+#dependencies
+npm -y init
+npm install express mysql2 sequelize dotenv 
+
+#tables
+flower //first one table 
+name:string
+colour:string
+indication:string
+price:Integer
+Event  //add second later once flower table is working
+eventName:string
+
+# Methods/CRUD
+get with findAll   //list All 
+get with findOne where id  //list one
+post with create   //create new object or add data into table
+delete with destroy  //delete all data in table
+delete with destroy where id  //delete one object 
+put with findOne where id and save() //update data
+
+#test all method 
+use insomnia 
+
+#relaion
+Event.BelongTo(Flower) 
+
+#middleware
+add middleware folder to main folder
+add error.js file
+add error handle function
+
+#user table
+userName:string
+fullName:string
+password:string
+
+#password hashing bcrypt
+
+
+
+#authentication
+
+
+
