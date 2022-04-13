@@ -42,4 +42,7 @@ router.delete("/flower/:id", async (req, res) => {
   res.status(200).json({ msg: "Deleted one flower", deleted });
 });
 
+//update
+//to be continue
+
 module.exports = router;
