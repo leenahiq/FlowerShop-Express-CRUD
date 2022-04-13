@@ -43,6 +43,20 @@ router.delete("/flower/:id", async (req, res) => {
 });
 
 //update
-//to be continue
+router.put("/flower/:id", async (req, res) => {
+  const updated = await Flower.update(
+    {
+      name: req.body.name,
+      colour: req.body.colour,
+      indication: req.body.indication,
+      price: req.body.price,
+    },
+    {
+      where: { id: req.params.id },
+    }
+  );
+
+  res.status(200).json({ msg: "Updated one flower", updated });
+});
 
 module.exports = router;
