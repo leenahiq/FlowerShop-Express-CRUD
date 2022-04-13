@@ -1,13 +1,13 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-const methodRouter = require("./routes/method");
+const productRouter = require("./routes/product");
 
 const connection = require("./connection");
 
 app.use(express.json());
 
-app.use("/method", methodRouter);
+app.use("/product", productRouter);
 
 app.listen(parseInt(process.env.HTTP_PORT), () => {
   console.log("Server Online");

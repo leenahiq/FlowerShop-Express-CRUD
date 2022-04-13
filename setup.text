@@ -5,6 +5,9 @@ add two folder models and add flower.js file in it and routes and add method.js 
 #dependencies
 npm -y init
 npm install express mysql2 sequelize dotenv 
+npm install nodemon --save-dev
+// to run in terminal npm run dev
+
 
 #tables
 flower //first one table 
@@ -40,6 +43,7 @@ fullName:string
 password:string
 
 #password hashing bcrypt
+npm install bcrypt jsonwebtoken passport passport-jwt passport-local
 
 
 
