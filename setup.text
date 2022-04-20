@@ -30,11 +30,11 @@ put with findOne where id and save() //update data
 use insomnia 
 
 #relaion
-Event.BelongTo(Flower) 
+Event.BelongTo(Flower) if impliment second table
 
 #middleware
 add middleware folder to main folder
-add error.js file
+add auth.js file
 add error handle function
 
 #user table
