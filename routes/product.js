@@ -32,29 +32,41 @@ router.get("/flower/:id", async (req, res, next) => {
 });
 // delete all flower
 router.delete("/flower", async (req, res) => {
-  const deleted = await Flower.destroy({ where: {} });
+  try {
+    const deleted = await Flower.destroy({ where: {} });
+  } catch (error) {
+    console.log(error);
+  }
   res.status(200).json({ msg: "Deleted all flowers", deleted });
 });
 
 //delete one
 router.delete("/flower/:id", async (req, res) => {
-  const deleted = await Flower.destroy({ where: { id: req.params.id } });
+  try {
+    const deleted = await Flower.destroy({ where: { id: req.params.id } });
+  } catch (error) {
+    console.log(error);
+  }
   res.status(200).json({ msg: "Deleted one flower", deleted });
 });
 
 //update
 router.put("/flower/:id", async (req, res) => {
-  const updated = await Flower.update(
-    {
-      name: req.body.name,
-      colour: req.body.colour,
-      indication: req.body.indication,
-      price: req.body.price,
-    },
-    {
-      where: { id: req.params.id },
-    }
-  );
+  try {
+    const updated = await Flower.update(
+      {
+        name: req.body.name,
+        colour: req.body.colour,
+        indication: req.body.indication,
+        price: req.body.price,
+      },
+      {
+        where: { id: req.params.id },
+      }
+    );
+  } catch (error) {
+    console.log(error);
+  }
 
   res.status(200).json({ msg: "Updated one flower", updated });
 });
